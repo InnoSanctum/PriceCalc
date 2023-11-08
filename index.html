@@ -13,6 +13,12 @@
         height: 100vh;
         width: 100vw;
         overflow-y: hidden;
+        background: linear-gradient(
+          180deg,
+          rgba(2, 0, 36, 1) 22%,
+          rgba(75, 9, 121, 1) 62%,
+          rgba(43, 46, 178, 1) 100%
+        );
       }
       .all-div {
         display: flex;
@@ -20,18 +26,13 @@
         align-items: center;
         justify-content: space-between;
         padding: 20px;
-
+        padding-bottom: 30%;
         margin: auto;
-        max-width: 375px;
+        max-width: 700px;
         height: 100%;
         width: 100%;
 
-        background: linear-gradient(
-          180deg,
-          rgba(2, 0, 36, 1) 22%,
-          rgba(75, 9, 121, 1) 62%,
-          rgba(43, 46, 178, 1) 100%
-        );
+        
         color: white;
         box-sizing: border-box;
       }
@@ -104,12 +105,12 @@
 
       <h2 class="res" id="result">Enter the values</h2>
       <div class="inputs">
-        <span class="lbl">Mass (gr): </span>
-        <input type="number" class="val" id="mass" required />
+        <span class="lbl">Mass (gr): </span><br>
+        <input type="number" class="val" id="mass" required /><br>
 
-        <span class="lbl">Price (gr): </span>
+        <span class="lbl">Price (gr): </span><br>
 
-        <input type="number" class="val" id="price" required />
+        <input type="number" class="val" id="price" required /><br>
       </div>
       <!-- <div class="result">
       <span class="res">Price for KG: </span><label id="GFG"> </label>
