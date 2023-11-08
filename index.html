@@ -6,7 +6,15 @@
     <link rel="stylesheet" href="style.css" />
     <title>Price Calculator</title>
     <style>
-      body {
+      * {
+        box-sizing: border-box;
+    }
+        body {
+            height: 100vh;
+            width: 100vw;
+
+        }  
+      .all-div {
         display:flex;
         flex-direction: column;
         align-items:center;
@@ -15,8 +23,9 @@
         
         margin: auto;
         max-width: 375px;
-        height: 1920px;
-        background: rgb(2, 0, 36);
+        height: 100%;
+        width: 100%;
+        
         background: linear-gradient(
           180deg,
           rgba(2, 0, 36, 1) 22%,
