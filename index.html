@@ -8,24 +8,24 @@
     <style>
       * {
         box-sizing: border-box;
-    }
-        body {
-            height: 100vh;
-            width: 100vw;
-
-        }  
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        overflow-y: hidden;
+      }
       .all-div {
-        display:flex;
+        display: flex;
         flex-direction: column;
-        align-items:center;
+        align-items: center;
         justify-content: space-between;
         padding: 20px;
-        
+
         margin: auto;
         max-width: 375px;
         height: 100%;
         width: 100%;
-        
+
         background: linear-gradient(
           180deg,
           rgba(2, 0, 36, 1) 22%,
@@ -38,19 +38,19 @@
 
       .lbl {
         font-size: large;
-        
+
         text-align: center;
       }
 
       .val {
-        position:static;
-
+        position: static;
+        border-radius: 10px;
         font-weight: 300;
         text-align: left;
         max-width: 355px;
         margin: 0;
-        font-family: 'Times New Roman', Times, serif;
-        font-size:xx-large;
+        font-family: "Times New Roman", Times, serif;
+        font-size: xx-large;
         border: none;
         outline: none;
       }
@@ -76,13 +76,12 @@
       }
 
       .button {
-        
         bottom: 30px;
-        
+
         padding: 25px;
         background: lightslategray;
-        width: 50px;
-        color:white;
+        border-radius: 10px;
+        color: white;
         user-select: none;
         margin: 20px auto;
       }
@@ -90,39 +89,37 @@
       .btn {
         outline: none;
         border: none;
-        
+
         background-color: transparent;
         text-align: center;
         font-size: xxx-large;
         font-weight: 900;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: "Courier New", Courier, monospace;
       }
     </style>
   </head>
   <body style="text-align: center">
-    <h1 style="color: green">Price Calc</h1>
+    <div class="all-div">
+      <h1 style="color: green">Price Calc</h1>
 
-    <h2 class="res" id="result">Enter the values</h2>
-    <div class="inputs">
-      
+      <h2 class="res" id="result">Enter the values</h2>
+      <div class="inputs">
         <span class="lbl">Mass (gr): </span>
-      <input type="number" class="val" id="mass" required/>
-      
-      <span class="lbl">Price (gr): </span>
-      
-      <input type="number" class="val" id="price" required/>
-    
-    </div>
-    <!-- <div class="result">
+        <input type="number" class="val" id="mass" required />
+
+        <span class="lbl">Price (gr): </span>
+
+        <input type="number" class="val" id="price" required />
+      </div>
+      <!-- <div class="result">
       <span class="res">Price for KG: </span><label id="GFG"> </label>
     </div> -->
-    
-    <div class="button">
-      <button onclick="myGeeks()" class="btn">X</button>
+
+      <div class="button">
+        <button onclick="myGeeks()" class="btn">&nbspX&nbsp</button>
+      </div>
     </div>
-    
-    
-    
+
     <script>
       function myGeeks() {
         let mass = +document.getElementById("mass").value;
