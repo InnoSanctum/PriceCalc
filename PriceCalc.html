@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=375px, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Price Calculator</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        overflow-y: hidden;
+        background: linear-gradient(
+          180deg,
+          rgba(2, 0, 36, 1) 22%,
+          rgba(75, 9, 121, 1) 62%,
+          rgba(43, 46, 178, 1) 100%
+        );
+      }
+      .all-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        padding-bottom: 30%;
+        margin: auto;
+        max-width: 700px;
+        height: 100%;
+        width: 100%;
+
+        
+        color: white;
+        box-sizing: border-box;
+      }
+
+      .lbl {
+        font-size: large;
+
+        text-align: center;
+      }
+
+      .val {
+        position: static;
+        border-radius: 10px;
+        font-weight: 300;
+        text-align: left;
+        max-width: 355px;
+        margin: 0;
+        font-family: "Times New Roman", Times, serif;
+        font-size: xx-large;
+        border: none;
+        outline: none;
+      }
+      .result {
+        padding: 10px;
+      }
+      .res {
+        text-align: center;
+        font-size: xx-large;
+      }
+
+      .inputs {
+        padding: 0 30px;
+        width: auto;
+        margin: 0;
+        /* padding-top: 0;
+        margin-top: 0; */
+        /* display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        
+        align-content: space-between; */
+      }
+
+      .button {
+        bottom: 30px;
+
+        padding: 25px;
+        background: lightslategray;
+        border-radius: 10px;
+        color: white;
+        user-select: none;
+        margin: 20px auto;
+      }
+
+      .btn {
+        outline: none;
+        border: none;
+
+        background-color: transparent;
+        text-align: center;
+        font-size: xxx-large;
+        font-weight: 900;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+  </head>
+  <body style="text-align: center">
+    <div class="all-div">
+      <h1 style="color: green">Price Calc</h1>
+
+      <h2 class="res" id="result">Enter the values</h2>
+      <div class="inputs">
+        <span class="lbl">Mass (gr): </span><br>
+        <input type="number" class="val" id="mass" required /><br>
+
+        <span class="lbl">Price (gr): </span><br>
+
+        <input type="number" class="val" id="price" required /><br>
+      </div>
+      <!-- <div class="result">
+      <span class="res">Price for KG: </span><label id="GFG"> </label>
+    </div> -->
+
+      <div class="button">
+        <button onclick="myGeeks()" class="btn">&nbspX&nbsp</button>
+      </div>
+    </div>
+
+    <script>
+      function myGeeks() {
+        let mass = +document.getElementById("mass").value;
+        let price = +document.getElementById("price").value;
+        document.getElementById("result").innerHTML = (
+          (price * 1000) /
+          mass
+        ).toFixed(2);
+      }
+    </script>
+  </body>
+</html>
