@@ -12,7 +12,7 @@
       body {
         height: 100vh;
         width: 100vw;
-        overflow-y: hidden;
+        overflow-y: auto;
         background: linear-gradient(
           180deg,
           rgba(2, 0, 36, 1) 22%,
@@ -52,7 +52,7 @@
         border-radius: 10px;
         font-weight: 300;
         text-align: center;
-        margin-right: 10px;
+        margin: 0 5px;
         font-family: "Times New Roman", Times, serif;
         font-size: xx-large;
         border: none;
@@ -95,11 +95,9 @@
 
       .res-table {
         width: 100%;
-
       }
       .res-table-row {
         border: 5px solid transparent;
-
       }
       .res-table-col {
         padding: 5px;
@@ -116,6 +114,11 @@
       <div class="table-inputs">
         <table class="inputs">
           <tr class="val">
+            <td>
+              <div class="button">
+                <button onclick="clr()" class="btn">X</button>
+              </div>
+            </td>
             <td>
               <input
                 type="number"
@@ -145,13 +148,13 @@
       </div>
       <div class="inter-results">
         <table class="results" id="res-table">
-        <tr class="res-table-row">
-          <td class="res-table-col">#</td>
-          <td class="res-table-col">M</td>
-          <td class="res-table-col">P</td>
-          <td class="res-table-col">KG</td>
-        </tr>
-      </table>
+          <tr class="res-table-row">
+            <td class="res-table-col">#</td>
+            <td class="res-table-col">M</td>
+            <td class="res-table-col">P</td>
+            <td class="res-table-col">KG</td>
+          </tr>
+        </table>
       </div>
     </div>
 
@@ -159,6 +162,11 @@
       function prnt(s) {
         return s;
       }
+      function clr() {
+        document.getElementById("res-table").innerHTML =
+        "<tr class='res-table-row'><td class='res-table-col'>#</td><td class='res-table-col'>M</td><td class='res-table-col'>P</td><td class='res-table-col'>KG</td>"
+      }
+
       function myGeeks() {
         let mass = +document.getElementById("mass").value;
         let price = +document.getElementById("price").value;
