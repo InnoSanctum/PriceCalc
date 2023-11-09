@@ -68,7 +68,7 @@
         font-size: xx-large;
         margin: 10px;
       }
-      
+
       .inputs {
         margin: 0;
         padding: 0 5px;
@@ -91,6 +91,20 @@
         font-size: xxx-large;
         font-weight: 900;
         font-family: "Courier New", Courier, monospace;
+      }
+
+      .res-table {
+        width: 100%;
+
+      }
+      .res-table-row {
+        border: 5px solid transparent;
+
+      }
+      .res-table-col {
+        padding: 5px;
+        border: 3px solid transparent;
+        width: 80px;
       }
     </style>
   </head>
@@ -129,16 +143,39 @@
           </tr>
         </table>
       </div>
+      <div class="inter-results">
+        <table class="results" id="res-table">
+        <tr class="res-table-row">
+          <td class="res-table-col">#</td>
+          <td class="res-table-col">M</td>
+          <td class="res-table-col">P</td>
+          <td class="res-table-col">KG</td>
+        </tr>
+      </table>
+      </div>
     </div>
 
     <script>
+      function prnt(s) {
+        return s;
+      }
       function myGeeks() {
         let mass = +document.getElementById("mass").value;
         let price = +document.getElementById("price").value;
-        document.getElementById("result").innerHTML = (
-          (price * 1000) /
-          mass
-        ).toFixed(2);
+        let res = (price * 1000) / mass;
+        let count = 1;
+        document.getElementById("result").innerHTML = res.toFixed(2);
+        document.getElementById("res-table").innerHTML =
+          document.getElementById("res-table").innerHTML +
+          "<tr class='res-table-row'><td class = 'res-table-col'>" +
+          prnt(count) +
+          "</td ><td  class = 'res-table-col'>" +
+          prnt(mass) +
+          "</td><td  class = 'res-table-col'>" +
+          prnt(price) +
+          "</td><td  class = 'res-table-col'>" +
+          prnt(res.toFixed(2)) +
+          "</td></tr>";
       }
     </script>
   </body>
